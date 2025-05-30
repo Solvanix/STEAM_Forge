@@ -1,4 +1,3 @@
-!echo "
 name: تثبيت المكتبات داخل GitHub Actions
 
 on: [push]
@@ -20,5 +19,4 @@ jobs:
 
       - name: التحقق من التثبيت
         run: |
-          python -c 'import googleapis_common_protos, dill; print(\" المكتبات تعمل بنجاح!\")'
-" > .github/workflows/workflow.yml
+          python -c "import googleapis_common_protos, dill; print('✅ المكتبات تعمل بنجاح!')"
