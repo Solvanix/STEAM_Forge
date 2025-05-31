@@ -14,9 +14,12 @@ jobs:
 
       - name: تثبيت المكتبات المطلوبة
         run: |
-          conda install -c conda-forge googleapis-common-protos dill segno
+          conda install --yes -c conda-forge googleapis-common-protos dill segno
+          pip install --upgrade pip
           pip install googleapis-common-protos dill segno
 
       - name: التحقق من التثبيت
         run: |
           python -c "import googleapis_common_protos, dill, segno; print(' جميع المكتبات تعمل بنجاح!')"
+          conda list
+          pip list | grep -E 'googleapis-common-protos|dill|segno'
