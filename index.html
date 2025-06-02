@@ -1,101 +1,66 @@
-
 <!DOCTYPE html>
 <html lang="ar">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>إعداد المشروع - تخصيص النموذج</title>
+    <title>إعداد المشروع - تشغيل النموذج</title>
     <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            background: linear-gradient(90deg, #2c2c2c, #7b1f1f, #5a3e2b);
+            color: #ffffff;
+            font-family: 'Questrial', sans-serif;
+            text-align: center;
+        }
+        button {
+            background-color: #5a3d2b;
+            padding: 12px 20px;
+            border: 2px solid silver;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+        button:hover {
+            background-color: #3e2820;
+        }
+    </style>
 </head>
 <body>
 
     <header>
-        <h1>إعداد المشروع - اختيار النموذج</h1>
-        <p>قم بتخصيص طريقة تشغيل المشروع وفق احتياجاتك.</p>
+        <h1>🔬 إعداد المشروع - تشغيل النموذج الأحدث</h1>
+        <p>قم بتشغيل النموذج المدرب وتحليل البيانات الجديدة</p>
     </header>
 
     <section>
-        <h2>إعدادات التنفيذ</h2>
-        <form>
-            <label for="execution-selection">اختر طريقة التنفيذ:</label>
-            <select id="execution-selection">
-                <option value="gpu-high-accuracy">GPU - دقة عالية</option>
-                <option value="cpu-balanced">CPU - متوازن</option>
-                <option value="system-32">نظام 32 - تحليل دقيق</option>
-                <option value="system-64">نظام 64 - أداء سريع</option>
-            </select>
-        </form>
+        <h2>تشغيل النموذج المدرب</h2>
+        <button onclick="runModel()">🔄 تشغيل النموذج الأحدث</button>
+        <p id="run-status">⚠️ حالة التشغيل: لم يتم التشغيل بعد</p>
     </section>
 
-    <section>
-        <h2>رفع البيانات</h2>
-        <form>
-            <label>حدد نوع البيانات:</label><br>
-            <input type="checkbox" id="use-image" onchange="toggleInput()"> صورة  
-            <input type="checkbox" id="use-video" onchange="toggleInput()"> فيديو  
-            <input type="checkbox" id="use-text" onchange="toggleInput()"> نص  
-            <br><br>
-
-            <div id="image-section" style="display: none;">
-                <label for="image-upload">تحميل صورة:</label>
-                <input type="file" id="image-upload" accept="image/*" onchange="previewImage()">
-                <img id="image-preview" style="max-width: 300px; display: none;">
-            </div>
-
-            <div id="video-section" style="display: none;">
-                <label for="video-upload">تحميل فيديو:</label>
-                <input type="file" id="video-upload" accept="video/*" onchange="previewVideo()">
-                <video id="video-preview" controls style="max-width: 300px; display: none;"></video>
-            </div>
-
-            <div id="text-section" style="display: none;">
-                <label for="text-description">إدخال نص:</label>
-                <textarea id="text-description" placeholder="أدخل وصف البيانات"></textarea>
-            </div>
-        </form>
-    </section>
+    <script>
+        function runModel() {
+            document.getElementById('run-status').textContent = "⚙️ يتم تشغيل النموذج...";
+            fetch("run_model.py") // ملف الرنكود المسؤول عن تشغيل النموذج
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('run-status').textContent = "✅ النموذج يعمل الآن!";
+            })
+            .catch(error => {
+                document.getElementById('run-status').textContent = "❌ حدث خطأ أثناء التشغيل!";
+            });
+        }
+    </script>
 
     <nav>
         <ul>
-            <li><a href="../index.html">🔗 العودة إلى الصفحة الرئيسية</a></li>
+            <li><a href="https://github.com/Ali-Khateb-1/STEAM_Nexus_Hub/blob/main/index.html">🔗 الانتقال إلى المستودع الرئيسي</a></li>
+            <li><a href="https://github.com/Ali-Khateb-1/STEAM_Nexus_Switchers_Lab/blob/main/index.html">💡 الدخول إلى مشروع الابتكار الزراعي</a></li>
             <li><a href="dashboard.html">⚙️ لوحة التحكم</a></li>
             <li><a href="updates.html">🔄 آخر التحديثات</a></li>
         </ul>
     </nav>
-
-    <script>
-        function toggleInput() {
-            document.getElementById("image-section").style.display = document.getElementById("use-image").checked ? "block" : "none";
-            document.getElementById("video-section").style.display = document.getElementById("use-video").checked ? "block" : "none";
-            document.getElementById("text-section").style.display = document.getElementById("use-text").checked ? "block" : "none";
-        }
-
-        function previewImage() {
-            const input = document.getElementById("image-upload");
-            const preview = document.getElementById("image-preview");
-            if (input.files && input.files[0]) {
-                const reader = new FileReader();
-                reader.onload = function(e) {
-                    preview.src = e.target.result;
-                    preview.style.display = "block";
-                };
-                reader.readAsDataURL(input.files[0]);
-            }
-        }
-
-        function previewVideo() {
-            const input = document.getElementById("video-upload");
-            const preview = document.getElementById("video-preview");
-            if (input.files && input.files[0]) {
-                const reader = new FileReader();
-                reader.onload = function(e) {
-                    preview.src = e.target.result;
-                    preview.style.display = "block";
-                };
-                reader.readAsDataURL(input.files[0]);
-            }
-        }
-    </script>
 
 </body>
 </html>
