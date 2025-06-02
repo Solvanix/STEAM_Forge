@@ -3,46 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>إعداد المشروع - تشغيل النموذج</title>
+    <title>تشغيل النموذج</title>
     <link rel="stylesheet" href="styles.css">
-    <style>
-        body {
-            background: linear-gradient(90deg, #2c2c2c, #7b1f1f, #5a3e2b);
-            color: #ffffff;
-            font-family: 'Questrial', sans-serif;
-            text-align: center;
-        }
-        button {
-            background-color: #5a3d2b;
-            padding: 12px 20px;
-            border: 2px solid silver;
-            border-radius: 5px;
-            font-size: 16px;
-            cursor: pointer;
-            transition: 0.3s;
-        }
-        button:hover {
-            background-color: #3e2820;
-        }
-    </style>
 </head>
 <body>
 
     <header>
-        <h1>🔬 إعداد المشروع - تشغيل النموذج الأحدث</h1>
-        <p>قم بتشغيل النموذج المدرب وتحليل البيانات الجديدة</p>
+        <h1>🔄 تشغيل النموذج المدرب</h1>
+        <p>اضغط على الزر لتشغيل النموذج وتحليل البيانات تلقائيًا</p>
     </header>
 
     <section>
-        <h2>تشغيل النموذج المدرب</h2>
-        <button onclick="runModel()">🔄 تشغيل النموذج الأحدث</button>
+        <button onclick="runCode()">🔄 تشغيل النموذج</button>
         <p id="run-status">⚠️ حالة التشغيل: لم يتم التشغيل بعد</p>
     </section>
 
     <script>
-        function runModel() {
+        function runCode() {
             document.getElementById('run-status').textContent = "⚙️ يتم تشغيل النموذج...";
-            fetch("run_model.py") // ملف الرنكود المسؤول عن تشغيل النموذج
+            fetch("run_code.py") 
             .then(response => response.text())
             .then(data => {
                 document.getElementById('run-status').textContent = "✅ النموذج يعمل الآن!";
@@ -55,10 +34,8 @@
 
     <nav>
         <ul>
-            <li><a href="https://github.com/Ali-Khateb-1/STEAM_Nexus_Hub/blob/main/index.html">🔗 الانتقال إلى المستودع الرئيسي</a></li>
-            <li><a href="https://github.com/Ali-Khateb-1/STEAM_Nexus_Switchers_Lab/blob/main/index.html">💡 الدخول إلى مشروع الابتكار الزراعي</a></li>
+            <li><a href="index.html">🔗 العودة إلى الصفحة الرئيسية</a></li>
             <li><a href="dashboard.html">⚙️ لوحة التحكم</a></li>
-            <li><a href="updates.html">🔄 آخر التحديثات</a></li>
         </ul>
     </nav>
 
