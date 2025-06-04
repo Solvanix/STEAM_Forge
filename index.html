@@ -3,41 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>تشغيل النموذج</title>
+    <title>📌 مركز STEAM Nexus</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
     <header>
-        <h1>🔄 تشغيل النموذج المدرب</h1>
-        <p>اضغط على الزر لتشغيل النموذج وتحليل البيانات تلقائيًا</p>
+        <h1>🚀 STEAM Nexus Hub</h1>
+        <p>مرحبًا بك في مركز STEAM Nexus، حيث يمكن الوصول إلى جميع الصفحات المحدثة والمشاريع.</p>
     </header>
-
-    <section>
-        <button onclick="runCode()">🔄 تشغيل النموذج</button>
-        <p id="run-status">⚠️ حالة التشغيل: لم يتم التشغيل بعد</p>
-    </section>
-
-    <script>
-        function runCode() {
-            document.getElementById('run-status').textContent = "⚙️ يتم تشغيل النموذج...";
-            fetch("run_code.py") 
-            .then(response => response.text())
-            .then(data => {
-                document.getElementById('run-status').textContent = "✅ النموذج يعمل الآن!";
-            })
-            .catch(error => {
-                document.getElementById('run-status').textContent = "❌ حدث خطأ أثناء التشغيل!";
-            });
-        }
-    </script>
 
     <nav>
         <ul>
-            <li><a href="index.html">🔗 العودة إلى الصفحة الرئيسية</a></li>
+            <li><a href="index.html">🏠 الصفحة الرئيسية</a></li>
+            <li><a href="updates.html">📢 صفحة التحديثات</a></li>
+            <li><a href="Prototype_Pages/index.html">📄 الصفحات النموذجية</a></li>
             <li><a href="dashboard.html">⚙️ لوحة التحكم</a></li>
+            <li><a href="projects.html">📂 المشاريع</a></li>
+            <li><a href="run_model.html">🔄 تشغيل النموذج</a></li>
         </ul>
     </nav>
+
+    <section>
+        <h2>🔎 حول الموقع</h2>
+        <p>هذا الموقع يوفر بيئة منظمة لمتابعة التطورات وأداء النماذج داخل STEAM Nexus Hub.</p>
+    </section>
+
+    <footer>
+        <p>© 2025 STEAM Nexus Hub | جميع الحقوق محفوظة</p>
+    </footer>
 
 </body>
 </html>
