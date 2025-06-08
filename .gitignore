@@ -1,4 +1,17 @@
+# تجاهل مجلد Private_Files بالكامل
 Private_Files/
+
+# تجاهل دفتر RevMap_Image_Classifier_تجريبي.ipynb بالكامل
 RevMap_Image_Classifier_تجريبي.ipynb
+
+# تجاهل مجلد .ipynb_checkpoints/ افتراضيًا
 .ipynb_checkpoints/
-!.ipynb_checkpoints/RevMap_Image_Classifier.ipynb
+
+# السماح برفع المجلد نفسه إلى GitHub
+!.ipynb_checkpoints/
+
+# السماح برفع جميع دفاتر Jupyter Notebook داخل .ipynb_checkpoints/
+!.ipynb_checkpoints/*.ipynb
+
+# تجاهل أي ملفات checkpoint داخل .ipynb_checkpoints/ لمنع رفع نسخ الدفاتر المحجوبة
+.ipynb_checkpoints/*_checkpoint.ipynb
