@@ -1,6 +1,0 @@
-{
-    "num_cores": 7,
-    "batch_size": 5,
-    "memory_limit_gb": 8,
-    "parallel_processing": true
-}

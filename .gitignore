@@ -4,13 +4,6 @@ Private_Files/
 # منع رفع دفتر RevMap_Image_Classifier_تجريبي.ipynb بالكامل
 RevMap_Image_Classifier_تجريبي.ipynb
 
-# السماح برفع المجلد .ipynb_checkpoints/ إلى GitHub
-!.ipynb_checkpoints/
-
-# السماح برفع نسخ checkpoint للدفاتر الأصلية المسموحة فقط
-!.ipynb_checkpoints/RevMap_Image_Classifier-checkpoint.ipynb
-!.ipynb_checkpoints/RevMap_Image_Classifier_تجريبي-checkpoint.ipynb
-
-# تجاهل أي ملفات أخرى داخل .ipynb_checkpoints/
-.ipynb_checkpoints/*
-
+Projects/FlowerClassifier/Project_Image_Classifier_Project - Copy.ipynb
+Projects/FlowerClassifier/data/raw/downloads/extracted/TAR_GZ.robots.ox.ac.uk_vgg_flowers_102_102flowersLQHsyAfbRilYz-PZL1eowlK0q9JA65VXcCAeRfeDskY.tgz
+Projects/FlowerClassifier/Models_New/

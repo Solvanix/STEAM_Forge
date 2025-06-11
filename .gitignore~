@@ -1,0 +1,16 @@
+# منع رفع مجلد Private_Files بالكامل
+Private_Files/
+
+# منع رفع دفتر RevMap_Image_Classifier_تجريبي.ipynb بالكامل
+RevMap_Image_Classifier_تجريبي.ipynb
+
+# السماح برفع المجلد .ipynb_checkpoints/ إلى GitHub
+!.ipynb_checkpoints/
+
+# السماح برفع نسخ checkpoint للدفاتر الأصلية المسموحة فقط
+!.ipynb_checkpoints/RevMap_Image_Classifier-checkpoint.ipynb
+!.ipynb_checkpoints/RevMap_Image_Classifier_تجريبي-checkpoint.ipynb
+
+# تجاهل أي ملفات أخرى داخل .ipynb_checkpoints/
+.ipynb_checkpoints/*
+
