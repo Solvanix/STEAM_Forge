@@ -1,27 +1,0 @@
-[33m6aae8b8[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m)[m HEAD@{0}: commit: تجاهل مجلد extracted لمنع رفعه
-[33m8ae0d17[m HEAD@{1}: commit: تجاهل مجلد extracted لمنع رفعه
-[33m6e764a2[m HEAD@{2}: checkout: moving from 5a837a2a52b9b1b6f7af1782bfa9967283e47302 to main
-[33m5a837a2[m HEAD@{3}: checkout: moving from main to 5a837a2a52b9b1b6f7af1782bfa9967283e47302
-[33m6e764a2[m HEAD@{4}: commit: إزالة الملفات الكبيرة من التتبع
-[33m42e159a[m HEAD@{5}: commit: رفع جميع التعديلات دفعة واحدة
-[33m6966967[m HEAD@{6}: commit: مزامنة كافة الملفات داخل STEAM-Forge
-[33m5a837a2[m HEAD@{7}: commit: إضافة مجلد Projects وتحديث المستودع
-[33mb376383[m[33m ([m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m HEAD@{8}: commit: 🚀 إنشاء مجلد event وإضافة config.json إليه
-[33m106f8db[m HEAD@{9}: pull origin main: Fast-forward
-[33mfc1e38c[m HEAD@{10}: commit: إضافة ملف فارغ لإجبار رفع
-[33m83e9968[m HEAD@{11}: commit: ضبط لمنع رفع الملفات غير المسموحة والسماح برفع وفقًا للمعايير المحددة
-[33meeb8759[m HEAD@{12}: commit: ضبط بحيث يسمح برفع .ipynb_checkpoints/ مع إبقاء الدفاتر المتاحة فقط
-[33m3c5b3e1[m HEAD@{13}: commit: تجاهل الملفات غير المرغوبة والإبقاء على RevMap_Image_Classifier.ipynb
-[33m0195598[m HEAD@{14}: commit: حذف .gitignore لاستعادة التتبع
-[33mfc73ac1[m HEAD@{15}: commit: إضافة Private_Files إلى .gitignore لمنع تعقبه
-[33m9b554f4[m HEAD@{16}: commit: إضافة RevMap_Image_Classifier.ipynb إلى التتبع في Git
-[33m62ce879[m HEAD@{17}: commit: إنشاء .gitignore وتجاهل RevMap_Image_Classifier_تجريبي.ipynb
-[33md4040ab[m HEAD@{18}: commit: إضافة googleapis-common-protos إلى requirements.txt
-[33m8fe24bc[m HEAD@{19}: checkout: moving from e5e80a1f14bfaf19f2e259848e7c6454ae2a5d5c to main
-[33me5e80a1[m HEAD@{20}: commit: تحديث لتجاهل
-[33m655c9fa[m HEAD@{21}: commit: تجاهل في Git
-[33m88fe1b1[m HEAD@{22}: commit (amend): تجاهل Private_Files في GitHub
-[33mb272f49[m HEAD@{23}: commit: تجاهل في
-[33mdeb7795[m HEAD@{24}: commit: منع رفع مجلد إلى GitHub
-[33m4734c44[m HEAD@{25}: commit: حذف الملفات غير المطلوبة داخل
-[33m66557cf[m HEAD@{26}: commit: تحديث لتجاهل جميع دفاتر Jupyter باستثناء
