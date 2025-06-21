@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8">
+  <title>تجربة النموذج - ColorBloom</title>
+  <style>
+    body { font-family: Tahoma; text-align: center; padding: 40px; background: #f3f3f3; }
+    h1 { color: #37474F; }
+    input[type="file"] { margin-top: 20px; }
+    button { margin-top: 15px; padding: 10px 20px; font-size: 16px; }
+    #output { margin-top: 30px; color: #00796B; font-weight: bold; }
+  </style>
+</head>
+<body>
+  <h1>🧪 تجربة نموذج ColorBloom</h1>
+  <p>ارفع صورة ليقوم النموذج لاحقًا بتصنيفها (هذه نسخة تجريبية فقط).</p>
+  <input type="file" accept="image/*">
+  <br>
+  <button onclick="mockClassify()">تشغيل التصنيف</button>
+  <div id="output"></div>
+
+  <script>
+    function mockClassify() {
+      const output = document.getElementById('output');
+      output.textContent = "📊 النتيجة المتوقعة: زهرة الأقحوان (Mock Prediction)";
+    }
+  </script>
+</body>
+</html>
